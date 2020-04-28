@@ -1,0 +1,46 @@
+{%extends "layout.html" %}
+<!--substituir no layout a parte block content por essa-->
+{% block content %}
+
+<section id="intro">
+    <header>
+        <!-- Cabeçalho da pagina-->
+        <a href="/">
+            <img src="/27pdZLL.png" alt="">
+        </a>                           
+    </header>
+    <main>
+        <!-- Conteudo principal da pagina-->
+        <p>
+            Ficar em casa em períodos longos, não deve ser nada fácil.
+        </p>
+
+        <p>
+            Iremos catalogar ideias, <strong> bricadeiras, jogos, filmes, livros, cursos, dicas</strong> e tudo que for necessário para tornar esse momento mais interessante.
+        </p>
+
+        <p>
+            Comece clicando em ver ideias para ver as  ideias cadastradas e contribua adicioando a sua ideia
+        </p>    
+    </main>
+
+    <section id="buttons">
+        <!-- Quando clicar no botão ele executará a função onOff-->
+        <button onclick="onOff()">Adicionar ideia</button>
+        <a href="/ideias" class="button">Ver Ideias</a> 
+
+    </section>
+    
+    
+    <footer>
+        <!-- Target=blank serve para abrir a guia em uma nova página-->
+        Com ❤ <a href="https://rocketseat.com.br"target="blank">Rockeseat</a>  
+    </footer>
+
+</section>
+
+<section id="last-ideias">
+    {% include "all_ideas.html" %}              
+</section>
+
+{% endblock %} 
